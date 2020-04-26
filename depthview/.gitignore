@@ -1,0 +1,6 @@
+Ogre.log
+bin/*
+obj/*
+ogre.cfg
+ogre_kinect_depth_view.layout
+*~

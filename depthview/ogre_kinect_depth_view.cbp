@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="ogre_kinect_depth_view" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/ogre_kinect_depth_view" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/ogre_kinect_depth_view" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="`pkg-config --cflags OGRE OIS libfreenect libusb-1.0`" />
+			<Add option="-fexceptions" />
+		</Compiler>
+		<Linker>
+			<Add option="`pkg-config --libs OGRE OIS libfreenect libusb-1.0`" />
+			<Add option="-lfreenect_sync" />
+			<Add library="GL" />
+		</Linker>
+		<Unit filename="AppDelegate.h" />
+		<Unit filename="BaseApplication.cpp" />
+		<Unit filename="BaseApplication.h" />
+		<Unit filename="TutorialApplication.cpp" />
+		<Unit filename="TutorialApplication.h" />
+		<Unit filename="glpclview.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="main.cpp" />
+		<Unit filename="matrix.clbt" />
+		<Unit filename="matrix.clbt.orig" />
+		<Unit filename="plugins.cfg" />
+		<Unit filename="resources.cfg" />
+		<Extensions>
+			<envvars />
+			<code_completion />
+			<lib_finder disable_auto="1" />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
